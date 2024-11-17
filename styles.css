@@ -1,0 +1,239 @@
+/* default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333; 
+    margin-top: 0px;
+}
+
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #003366; 
+    padding: 0px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    right:0;
+    left:0;
+}
+
+nav div {
+    margin:3px 5px 3px 5px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+    color: #53feeb; /* colour and size change on hover */
+    font-size: 18px;
+}
+
+/* Responsive Styles */
+@media (max-width: 860px) {
+    nav ul {
+        flex-direction: column; /* display items vertically */
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #003366; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        display: none; /* Initially hidden */
+    }
+
+    nav ul li {
+        margin: 10px 0; /*spacing between links */
+    }
+
+    /* Toggle Button Styles */
+    .nav-toggle {
+        display: block;
+        color: white;
+        font-size: 1.5em;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    /* Shows nav items when toggled */
+    .nav-open ul {
+        display: flex;
+    }
+}
+
+/* Mobile icon only visible on small screens */
+@media (min-width: 860px) {
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* Logo styling */
+.logo img {
+    max-height: 50px; /* Max height of the logo */
+    width: auto; /* Ensure the aspect ratio is maintained */
+    margin-right: 20px; /* Space between the logo and the navigation links */
+
+    max-height: 75px;
+    width: auto;
+    margin:0px 20px 0px 0px;
+    border-radius:50%;
+    display:block;
+    
+}
+
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #003366; 
+}
+
+h2 {
+    color: #003366; 
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+form {
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the form */
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* Rounded corners */
+}
+
+form button {
+    background-color: #003366; 
+    color: white; 
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+
+form button:hover {
+    background-color: #005599; /* Lighter blue on hover */
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Collapse borders */
+    background-color: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+table th, table td {
+    border: 1px solid #ddd; 
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #003366; 
+    color: white; 
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Light gray on row hover */
+}
+
+/* Additional Styles */
+footer {
+    text-align: center;
+    color: #333; /* Dark text */
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #003366; 
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+ /* Style for error message */
+ .error-message {
+    color: red;
+    background-color: white;
+    border: 1px solid rgb(255, 0, 0);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
